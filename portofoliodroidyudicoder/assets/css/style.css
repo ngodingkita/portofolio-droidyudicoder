@@ -1,0 +1,423 @@
+/*
+	css reset berguna untuk ulang semua tag html 
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big,cite,code,del,dfn,em,img,ins, kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,section {
+	display: inline;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+nav {
+	padding: 0;
+	margin: 0;
+}
+
+/*** --------------style untuk semua content----------------- ***/
+
+body {
+	font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*** style bagian navbar ***/
+header {
+	position: fixed;
+    display: flex;
+    background-color: #00a5af;
+    justify-content: space-around;
+    padding: 15px 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.judul {
+	font-size: 30px;
+	color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+nav li {
+	margin-left: 50px;
+	box-sizing: content-box;
+}
+
+nav a {
+	text-decoration: none;
+	color: #e3e3e3;
+	position: relative;
+	top: 8px;
+}
+
+nav a:hover {
+	color: white;
+}
+
+
+/* hamburger menu toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    top: 4px;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -9px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* hamburger menu animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: #fff;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(-1px, 0);
+    background-color: #fff;
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+
+/*** ------------------style bagian main content-------------------- ***/
+
+/* style sub bagian main content pada article tentang */
+.style-tentang {
+	position: relative;
+	top: 200px;
+	padding-left: 50px;
+}
+
+.style-tentang h1 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.style-tentang h1 span {
+	color: #03acb6;
+}
+
+.style-tentang p {
+	font-size: 20px;
+	color: #868e96;
+	line-height: 25px;
+}
+
+.style-tentang .gambar_personal {
+	width: 470px;
+	position: absolute;
+	left: 50%;
+	top: -60px;
+}
+
+.style-tentang p a {
+	color: #03acb6;
+	text-decoration: none;
+}
+
+.style-tentang .quote {
+	font-family: muli;
+	font-size: 16px;
+}
+
+.garis-tentang {
+	border-color: #fffafa;
+	margin-top: 376px;
+}
+
+/* style sub bagian main content pada article pendidikan */
+
+.style-pendidikan {
+	position: relative;
+	top: 90px;
+	padding-left: 50px;
+}
+
+.style-pendidikan h1 {
+	color: #03acb6;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.style-pendidikan h2 {
+	color: #383838;
+	font-size: 26px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+.style-pendidikan h3 {
+	color: #868e96;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.style-pendidikan .penjelasan {
+	color: #9199a0;
+	font-family: muli;
+	margin-top: 25px;
+	width: 65%;
+}
+
+.style-pendidikan .nilai {
+	color: #03acb6;
+	line-height: 30px;
+	font-family: muli;
+}
+
+.style-pendidikan .tanggal {
+	color: #03acb6;
+	font-family: muli;	
+	line-height: 30px !important;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	right: 40px;
+	bottom: 140px;
+}
+
+.garis-pendidikan {
+	margin-top: 190px;
+}
+
+/* style sub bagian main content pada article keterampilan */
+
+.style-keterampilan {
+	margin-left: 50px;
+	position: relative;
+	top: 200px;
+}
+
+.style-keterampilan h1 {
+	color: #03acb6;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+
+.style-keterampilan h2 {
+	color: #868e96;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.style-keterampilan ul {
+	margin-top: 20px;
+}
+
+.style-keterampilan ul li {
+	font-size: 20px;
+	color: #868e96;
+	line-height: 30px;
+	margin-left: 20px;
+}
+
+.garis-keterampilan {
+	margin-top: 450px;
+}
+
+/* style sub bagian main content pada article pengalaman */
+
+.style-pengalaman {
+	position: relative;
+	top: 90px;
+	padding-left: 50px;
+}
+
+.style-pengalaman h1 {
+	color: #03acb6;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.style-pengalaman h2 {
+	color: #383838;
+	font-size: 26px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+.style-pengalaman h3 {
+	color: #868e96;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.style-pengalaman .penjelasan {
+	color: #9199a0;
+	font-family: muli;
+	margin-top: 25px;
+	width: 67%;
+	line-height: 20px;
+}
+
+.style-pengalaman .tanggal {
+	color: #03acb6;
+	font-family: muli;	
+	line-height: 30px !important;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	right: 40px;
+	bottom: 140px;
+}
+
+/* aside */
+
+aside {
+	display: flex;
+	justify-content: center;
+}
+
+aside .card {
+	margin-top: 100px;
+	background-color: #03acb6;
+	text-align: center;
+	padding: 100px 50px;	
+	border-radius: 5px;
+}
+
+
+aside .card img {
+	width: 140px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+aside .card h3 {
+	color: #f5f4f4;
+	font-size: 40px;
+	position: relative;
+	bottom: 40px;
+}
+
+aside .card p {
+	color: #f5f4f4;
+	font-size: 20px;
+	position: relative;
+	top: 20px;
+}
+
+/* footer */
+footer {
+	position: relative;
+	top: 140px;
+	margin: 0;
+	padding: 0;
+}
+footer p{
+	background-color: #353434;
+	padding: 20px;
+	font-family: muli;
+	text-align: center;
+	color: #eaeaea;
+}
+
+/* ukurab tablet */
+@media screen and (max-width: 1000px) {
+   .style-tentang .gambar_personal {
+   		display: none;
+   }
+
+   .style-pendidikan .tanggal {
+	color: #03acb6;
+	font-family: muli;	
+	display: block;
+	position: relative;
+	left: 0px;
+	bottom: 0;
+	}
+
+	.style-pengalaman .tanggal {
+	color: #03acb6;
+	font-family: muli;	
+	line-height: 30px !important;
+	display: block;
+	right: 0px;
+	bottom: 0px;
+	}
+
+}
+
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    header ul {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 100%;
+        height: 40vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #00a5af;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    header ul.slide {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
